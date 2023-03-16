@@ -257,16 +257,23 @@ function resetStopwatch() {
 }   
 
 function updateTime(timer) {
-   let milliseconds = timer % 1000;
+
+   milliseconds = (timer % 1000)/10;
+   console.log('len',milliseconds)
+
+   // if(milliseconds  10)
+
+
    let seconds = Math.floor(timer / 1000);
    let minutes = Math.floor(seconds / 60);
    seconds = seconds % 60;
-   return `${pad(minutes)}:${pad(seconds)}.${pad(milliseconds, 3)}`;
+   
+   return `${pad(minutes)}:${pad(seconds)}.${milliseconds}`;
 }
 
 function pad(number, length = 2) {
    return String(number).padStart(length, "0");
- }
+}
 
 document.addEventListener("keyup", startGame, false);
 
