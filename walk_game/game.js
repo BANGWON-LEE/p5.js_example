@@ -3,54 +3,77 @@
    // let x=225;
    // let y=225;
 
-   let x2 = 200;
-   let y2 = 200;
+   let hater = [
+      {
+         x: 200,
+         y : 200
+      },
+      {
+         x : 13,
+         y : 13
+      },
+      {
+         x :33,
+         y :488,
+      },
+      {
+         x : -13,
+         y : 188
+      },
+      { 
+         x : 33,
+         y : 48
+      },
+      {
+         x : 101,
+         y : 330
+      },
+      {
+      x : 233,
+      y : 30
+      },
+      {
+         x : 40,
+         y : 148
+      },
+      {
+      x : 633,
+      y : 190
+      },
+      {
+         x : 1011,
+         y : 330
+      },
+      {
+         x : 933,
+         y : 530,
+      },
+      {
+         x : 890,
+         y : 748,
+      },
+      {
+      x : 1103,
+      y : 690
+      },
+      {
+         x : 160,
+         y : 130
+      },
+      {
+         x : 110,
+         y : 230
+      },
+      {
+         x : 330,
+         y : 130
+      }
+   ] 
 
-   let x3 = 13;
-   let y3 = 13;
 
-   let x4 = 33;
-   let y4 = 488;
-
-   let x5 = -13;
-   let y5 = 188;
-
-   let x6 = 33;
-   let y6 = 48;
-
-   let x7 = 101;
-   let y7 = 330;
    
-   let x8 = 233;
-   let y8 = 30;
 
-   let x9 = 40;
-   let y9 = 148;
-
-   let x10 = 633;
-   let y10 = 190;
-
-   
-   let x11 = 1011;
-   let y11 = 330;
-   
-   let x12 = 933;
-   let y12= 530;
-
-   let x13 = 890;
-   let y13 = 748;
-
-   let x14 = 1103;
-   let y14 = 690;
-
-   let x15 = 160;
-   let y15 = 130;
-
-   let x16 = 110;
-   let y16 = 230;
-
-   let x17 = 330;
-   let y17 = 130;
+  
 
    let gameSignal = false;
 
@@ -58,9 +81,6 @@
 
    function setup() {
       canvas = createCanvas(1200, 800);
-
-         console.log('22', point(x,y))
-         console.log('x y', x, y)
 
       const childDiv = createDiv(" goal ");
       
@@ -101,90 +121,13 @@ function draw() {
       point(x,y)
       goal();
    
-      stroke(266,0,266);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x2, y2, 68, 68);
-
-      stroke(266,0,266);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x3, y3, 68, 68);
-
-      stroke(266,0,266);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x4, y4, 68, 68);
-
-      stroke(266,0,366);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x5, y5, 68, 68);
-
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x6, y6, 68, 68);
-
-      
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x7, y7, 68, 68);
-
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x8, y8, 68, 68);
-
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x9, y9, 68, 68);
-
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x10, y10, 68, 68);
-
-      
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x11, y11, 68, 68);
-
-      
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x12, y12, 68, 68);
-
-      
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x13, y13, 68, 68);
-
-      
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x14, y14, 68, 68);
-
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x15, y15, 68, 68);
-
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x16, y16, 68, 68);
-
-      stroke(266,0,166);
-      strokeWeight(2);
-      fill(127);
-      ellipse(x17, y17, 68, 68);
+      for(let i = 0; i<hater.length; i++){
+   
+         stroke(266,0,266);
+         strokeWeight(2);
+         fill(127);
+         ellipse(hater[i].x, hater[i].y, 68, 68);
+      }
       
    }
 
@@ -197,7 +140,7 @@ setInterval(handleKeyState, 100); // 10ms 간격으로 실행
 
 
 let seconds = 0;
-let minutes = 0;
+let milliseconds;
 let intervalId;
 
 function goal(){
@@ -214,67 +157,48 @@ function goal(){
    }
 }
 
-xspeed = 5.5;
-yspeed = 5;
 
-xspeed3 = 24.35;
-yspeed3 = 21.87;
+let speed = [
+   {
+      xspeed : 5.5,
+      yspeed : 5
+   },
+   {
+      xspeed : 24.35,
+      yspeed : 21.87
+   },
+   {
+      xspeed :11.35,
+      yspeed : 9.87
+   },
+   {
+      xspeed : 13.35,
+      yspeed : 11.87
+   },
+   {
+      xspeed : 10.35,
+      yspeed : 10.87
+   },
 
-xspeed4 = 11.35;
-yspeed4 = 9.87;
-
-xspeed5 = 33.35;
-yspeed5 = 11.87;
-
-xspeed6 = 16.35;
-yspeed6 = 15.87;
+]
 
 function impediments(){
-   x2 = x2 + xspeed;
-   y2 = y2 + yspeed;
-   x3 = x3 + xspeed3;
-   y3 = y3 + yspeed3;
-   x4 = x4 + xspeed4;
-   y4 = y4 + yspeed4;
-   x5 = x5 + xspeed5;
-   y5 = y5 + yspeed5;
-   x6 = x6 + xspeed6;
-   y6 = y6 + yspeed6;
+   // console.log('width', speed.length)
 
-   if ((x2 > width) || (x2 < 0)) {
-     xspeed = xspeed * -1;
-   }
-   if ((y2 > height) || (y2 < 0)) {
-     yspeed = yspeed * -1;
+   for(let i = 0; i<speed.length; i++){
+      hater[i].x = hater[i].x + speed[i].xspeed
+      hater[i].y = hater[i].y + speed[i].yspeed
+
+      if((hater[i].x > width) || (hater[i].x < 0)){
+         speed[i].xspeed = speed[i].xspeed * -1;
+      }
+
+      if((hater[i].y > height) || (hater[i].y < 0)){
+         speed[i].yspeed = speed[i].yspeed * -1;
+      }
+
    }
 
-   if ((x3 > width) || (x3 < 0)) {
-      xspeed3 = xspeed3 * -1;
-    }
-    if ((y3 > height) || (y3 < 0)) {
-      yspeed3 = yspeed3 * -1;
-    }
-
-    if ((x4 > width) || (x4 < 0)) {
-      xspeed4 = xspeed4 * -1;
-    }
-    if ((y4 > height) || (y4 < 0)) {
-      yspeed4 = yspeed4 * -1;
-    }
-
-    if ((x5 > width) || (x5 < 0)) {
-      xspeed5 = xspeed5 * -1;
-    }
-    if ((y5 > height) || (y5 < 0)) {
-      yspeed5 = yspeed5 * -1;
-    }
-
-    if ((x6 > width) || (x6 < 0)) {
-      xspeed6 = xspeed6 * -1;
-    }
-    if ((y6 > height) || (y6 < 0)) {
-      yspeed6 = yspeed6 * -1;
-    }
 }
 
 
@@ -290,147 +214,37 @@ function lose(){
 }
 
 function caught(){
-
-   if((x2-30.7 <= x && x2+30.7 >= x) && (y2-31.2 <= y && y2+31.2 >= y)  ){
-      console.log('x2 y2', x2, y2)
+   for(let i = 0; i<hater.length; i++){
+      if((hater[i].x-30.7 <= x && hater[i].x+30.7 >= x) && (hater[i].y-31.2 <= y && hater[i].y+31.2 >= y)  ){
+         // console.log('x2 y2', x2, y2)
+         
+         alert('잡혔다.');
+         x= 860;
+         y= 570;
       
-      alert('잡혔다.');
-      x= 860;
-      y= 570;
-      
-      x2 = 200;
-      y2 = 200;
-      x3 = 350;
-      x3 = 350;
-      x4 = 433;
-      y4 = 488;
-      x5 = -13;
-      y5 = 188;
-      x6 = 33;
-      y6 = 48;
-   
-      gameSignal = false
-      stopStopwatch()
-      resetStopwatch()
-      // clearInterval(intervalId);
-      window.location.reload();
-      
+         gameSignal = false
+         stopStopwatch()
+         resetStopwatch()
+         // clearInterval(intervalId);
+         window.location.reload();
+         
+      }
    }
-   if((x3-30.7 <= x && x3+30.7 >= x) && (y3-31.2 <= y && y3+31.2 >= y)  ){
-      console.log('x2 y2', x2, y2)
-      
-      alert('잡혔다.');
-      x= 860;
-      y= 570;
-      
-      x2 = 200;
-      y2 = 200;
-      x3 = 350;
-      x3 = 350;
-      x4 = 433;
-      y4 = 488;
-      x5 = -13;
-      y5 = 188;
-      x6 = 33;
-      y6 = 48;
-   
-      gameSignal = false
-      stopStopwatch()
-      resetStopwatch()
-      window.location.reload();
-   }
-   if((x4-30.7 <= x && x4+30.7 >= x) && (y4-31.2 <= y && y4+31.2 >= y)  ){
-      console.log('x2 y2', x2, y2)
-      
-      alert('잡혔다.');
-      x= 860;
-      y= 570;
-      
-      x2 = 200;
-      y2 = 200;
-      x3 = 350;
-      x3 = 350;
-      x4 = 433;
-      y4 = 488;
-      x5 = -13;
-      y5 = 188;
-      x6 = 33;
-      y6 = 48;
-   
-      gameSignal = false
-      stopStopwatch()
-      resetStopwatch()
-      window.location.reload();
-      
-   }
-
-   if((x5-30.7 <= x && x5+30.7 >= x) && (y5-31.2 <= y && y5+31.2 >= y)  ){
- 
-      
-      alert('잡혔다.');
-      x= 860;
-      y= 570;
-      
-      x2 = 200;
-      y2 = 200;
-      x3 = 350;
-      x3 = 350;
-      x4 = 433;
-      y4 = 488;
-      x5 = -13;
-      y5 = 188;
-      x6 = 33;
-      y6 = 48;
-   
-      gameSignal = false
-      stopStopwatch()
-      resetStopwatch()
-      window.location.reload();
-      
-   }
-
-   
-   if((x6-30.7 <= x && x6+30.7 >= x) && (y6-31.2 <= y && y6+31.2 >= y)  ){
-      console.log('x2 y2', x2, y2)
-      
-      alert('잡혔다.');
-      x= 860;
-      y= 570;
-      
-      x2 = 200;
-      y2 = 200;
-      x3 = 350;
-      x3 = 350;
-      x4 = 433;
-      y4 = 488;
-      x5 = -13;
-      y5 = 188;
-      x6 = 33;
-      y6 = 48;
-   
-      gameSignal = false
-      stopStopwatch()
-      resetStopwatch()
-      window.location.reload();
-      
-   }
-
 }
 
 function startStopwatch() {
-   intervalId = setInterval(() => {
-      seconds++;
-      if (seconds === 60) {
-         seconds = 0;
-         minutes++;
-         if (minutes === 60) {
-            minutes = 0;
-            hours++;
-         }
-      }
-      updateTime();
-   }, 1000);
+   intervalId = setInterval(incrementTimer, 10);
 }
+
+let timer = 0;
+
+function incrementTimer() {
+
+  timer += 10;
+  const stopwatchElement = document.getElementById('stopwatch');
+  stopwatchElement.innerHTML = updateTime(timer);
+}
+
 function stopStopwatch() {
    clearInterval(intervalId);
 }
@@ -438,25 +252,27 @@ function stopStopwatch() {
 function resetStopwatch() {
    clearInterval(intervalId);
    seconds = 0;
-   minutes = 0;
-   hours = 0;
-   updateTime();
+   milliseconds = 0;
+   // updateTime();
 }   
 
-function updateTime() {
-const stopwatchElement = document.getElementById('stopwatch');
-stopwatchElement.innerHTML = `${pad(minutes)}:${pad(seconds)}`;
+function updateTime(timer) {
+   let milliseconds = timer % 1000;
+   let seconds = Math.floor(timer / 1000);
+   let minutes = Math.floor(seconds / 60);
+   seconds = seconds % 60;
+   return `${pad(minutes)}:${pad(seconds)}.${pad(milliseconds, 3)}`;
 }
 
-function pad(value) {
-return value < 10 ? `0${value}` : value;
-}
+function pad(number, length = 2) {
+   return String(number).padStart(length, "0");
+ }
 
 document.addEventListener("keyup", startGame, false);
 
 function startGame(e){
    if(e?.key === 'Enter' && gameSignal === false){
-      console.log('eee')
+      // console.log('eee')
       // clearInterval(timer);
       startStopwatch()
       gameSignal=true
@@ -495,7 +311,3 @@ if (keyState[40]) { // 아래쪽 방향키 눌림
    }
 }
 }
-
-document.addEventListener('keyup', function(event) {
-   
-});
