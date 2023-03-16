@@ -483,13 +483,13 @@ if (keyState[38]) { // 위쪽 방향키 눌림
    }
 }
 if (keyState[39]) { // 오른쪽 방향키 눌림
-   if(x <=892.7 ){
+   if(x <=1192.7 ){
       x+=5.5;
       return;
    }
 }
 if (keyState[40]) { // 아래쪽 방향키 눌림
-   if(y <=593.2 ){
+   if(y <=793.2 ){
       y+=5.5;
       return;
    }
@@ -497,7 +497,5 @@ if (keyState[40]) { // 아래쪽 방향키 눌림
 }
 
 document.addEventListener('keyup', function(event) {
-   // clearInterval(timer);
-   // clearInterval();
    
- });
+});
