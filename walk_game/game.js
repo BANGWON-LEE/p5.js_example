@@ -202,7 +202,7 @@ function impediments(){
 }
 
 
-function lose(){
+function arrive(){
 
    if(x <= 32.4 && y <= 32.8 ){
       alert('도착하였습니다.');
@@ -259,7 +259,7 @@ function resetStopwatch() {
 function updateTime(timer) {
 
    milliseconds = (timer % 1000)/10;
-   console.log('len',milliseconds)
+
 
    // if(milliseconds  10)
 
