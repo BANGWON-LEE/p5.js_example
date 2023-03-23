@@ -58,7 +58,7 @@ function draw() {
          strokeWeight(2.1);
          ellipse(farRain02[i].x+z, farRain02[i].y  , 1, 38);
       }
-      impediments();
+      raining();
    
 }
 
@@ -74,7 +74,7 @@ let speed = [
    },
 ]
 
-function impediments(){
+function raining(){
 // nearRain의 속도 조절 및 위치 초기화
 
    for(let i = 0; i<nearRain.length; i++){
@@ -96,7 +96,7 @@ function impediments(){
          nearRain[r].y = value[r].y_value
       }
 
-      if((nearRain02[i].y > height) || (nearRain02[i].y > 300)){
+      if((nearRain02[i].y > height) || (nearRain02[i].y > 450)){
          // speed[i].yspeed = speed[i].yspeed * -1;
          nearRain02[r].x = value[r].x_value
          nearRain02[r].y = value[r].y_value
