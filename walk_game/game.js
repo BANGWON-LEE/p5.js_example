@@ -287,9 +287,6 @@ function startGame(e){
     
 }
 
-
-
-
  // 연속으로 누른 방향키 처리 함수
 function handleKeyState() {
 if (keyState[37]) { // 왼쪽 방향키 눌림
